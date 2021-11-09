@@ -1,0 +1,54 @@
+version: "3.7"
+
+services:
+  backend:
+    container_name: server
+    restart: unless-stopped
+    build: ./experiments-back
+    ports:
+      - "3001:3001"
+    env_file: ./experiments-back/.env
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://db:27017/experiments-dev
+      - CLOUDINARY_CLOUD_NAME=dks0gon8d
+      - CLOUDINARY_API_KEY=168482825669135
+      - CLOUDINARY_API_SECRET=LpfFsg02-pKGUJeCaXDdU2NUBNI
+    networks:
+      - app-network
+    depends_on:
+      - db
+
+  frontend:
+    container_name: client
+    restart: unless-stopped
+    build: ./experiments-front
+    environment:
+      - NODE_PATH=/app/src
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+    networks:
+      - app-network
+
+  db:
+    container_name: mongodb
+    image: mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: experiments-dev
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - mongo_config:/data/configdb
+    networks:
+      - app-network
+
+networks:
+  app-network:
+
+volumes:
+  mongo_data: {}
+  mongo_config: {}
