@@ -1,0 +1,17 @@
+[
+    {
+        "value": "Pregunta Test 1",
+        "alternatives": 3,
+        "type": 1
+    },
+    {
+        "value": "Pregunta Test 2",
+        "alternatives": 4,
+        "type": 2
+    },
+    {
+        "value": "Pregunta Test 3",
+        "alternatives": 3,
+        "type": 3
+    }
+]

@@ -1,0 +1,61 @@
+{
+    "title": "Modelo de prueba cypress",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+    "model": {
+        "actors": [
+            {
+                "unique": "4",
+                "identifier": "Actor 1",
+                "name": "New Actor 1",
+                "type": "Actor",
+                "x": 130,
+                "y": 150
+            }
+        ],
+        "communicativeEvents": [
+            {
+                "unique": "2",
+                "identifier": "CE 1",
+                "name": "New CE 1",
+                "type": "Communicative Event",
+                "goals": "",
+                "description": "",
+                "channel": "",
+                "temporalRestrictions": "",
+                "frequency": "",
+                "contextConstraints": "",
+                "structuralConstraints": "",
+                "treatment": "",
+                "linkedCommunication": "",
+                "linkedReaction": "",
+                "x": 450,
+                "y": 140,
+                "supportActor": [
+                    {
+                        "unique": "3",
+                        "identifier": "Actor",
+                        "name": "New Actor",
+                        "type": "Support Actor"
+                    }
+                ]
+            }
+        ],
+        "specialisedCommunicativeEvents": [],
+        "communicativeInteractions": [
+            {
+                "unique": "5",
+                "identifier": "CI",
+                "name": "New CI",
+                "type": "Communicative Interaction",
+                "messageStructure": {
+                    "name": "New Structure",
+                    "type": "Structure",
+                    "children": []
+                },
+                "source": "4",
+                "target": "2"
+            }
+        ],
+        "precedenceRelations": []
+    }
+}

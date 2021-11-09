@@ -1,0 +1,20 @@
+[
+    {
+        "value": "Qué actor es el mas relevante?",
+        "alternatives": ["Actor 1", "Actor 2", "Actor 3", "Actor 4"]
+    },
+    {
+        "value": "Cuántos eventos tiene el diagrama?",
+        "alternatives": ["Tiene 4", "Tiene 7", "Tiene 10", "No lo se"]
+    },
+    {
+        "value": "Cómo calificaría la dificultada de este diagrama?",
+        "alternatives": [
+            "Muy compleja",
+            "Compleja",
+            "Normal",
+            "Facil de entender",
+            "Muy facil de entender"
+        ]
+    }
+]
